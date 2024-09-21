@@ -1,4 +1,6 @@
 deepakagrawal3103/notes_app-html-css-js-
+
+
 Notes App
 A simple and interactive Notes Application that allows users to create, edit, and delete notes. The app uses localStorage to ensure that the notes persist even after refreshing or closing the browser.
 
