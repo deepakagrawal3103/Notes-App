@@ -1,0 +1,202 @@
+/* ====================================
+   Reset and Base Styles
+   - Removes default margins and paddings.
+   - Sets a consistent box-sizing model.
+   - Applies the 'Poppins' font to all elements.
+==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* 
+    Body Styles:
+    - Sets a full viewport height.
+    - Applies a linear gradient background for a vibrant look.
+    - Sets default text color to white.
+    - Adds top and left padding for spacing.
+*/
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    color: #fff;
+    padding-top: 4%;
+    padding-left: 10%;
+}
+
+/* 
+    Header Styles:
+    - Uses flexbox to align items centrally.
+    - Sets a larger font size and bold weight for prominence.
+*/
+.container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+/* 
+    Header Image Styles:
+    - Defines the width of the notes icon.
+    - Adds right margin for spacing between icon and text.
+*/
+.container h1 img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+/* 
+    Create Button Styles:
+    - Uses flexbox to align icon and text.
+    - Applies a linear gradient background for depth.
+    - Sets font size and removes default button outlines.
+    - Rounds the button edges for a modern look.
+    - Adds padding and margin for spacing.
+    - Changes cursor to pointer on hover.
+    - Sets text color to white for contrast.
+    - Adds transition for smooth hover effect.
+*/
+.container button {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#9418fd, #571094);
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px; /* Increased padding for better appearance */
+    margin: 30px 0;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+/* 
+    Create Button Image Styles:
+    - Sets the width of the edit icon.
+    - Adds top margin to align the icon vertically.
+    - Adds right margin for spacing between icon and text.
+*/
+.container button img {
+    width: 25px;
+    margin-top: 5px; /* Adjusted for better vertical alignment */
+    margin-right: 10px; /* Added for spacing between icon and text */
+}
+
+/* 
+    Create Button Hover Effect:
+    - Darkens the gradient on hover for interactivity.
+*/
+.container button:hover {
+    background: linear-gradient(#7a14c1, #430d6e);
+}
+
+/* 
+    Notes Container Styles:
+    - Uses flexbox to wrap notes.
+    - Sets a maximum width for notes.
+    - Adds gap between notes for spacing.
+*/
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* 
+    Input Box Styles:
+    - Sets relative positioning for delete icon placement.
+    - Defines width and minimum height for consistency.
+    - Applies white background with dark text for readability.
+    - Adds padding and margin for spacing.
+    - Removes outline and rounds the edges slightly.
+    - Adds box-shadow for depth.
+    - Adds transition for hover effect.
+*/
+.input-box {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+    background: white;
+    color: #333;
+    padding: 20px;
+    margin: 20px 0;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* 
+    Input Box Hover Effect:
+    - Elevates the box shadow on hover for depth.
+*/
+.input-box:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 
+    Delete Icon Styles:
+    - Positions the delete icon absolutely within the input box.
+    - Sets size and cursor for interactivity.
+    - Adds transition for hover effect.
+*/
+.input-box img {
+    width: 25px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* 
+    Delete Icon Hover Effect:
+    - Scales up the icon slightly on hover.
+*/
+.input-box img:hover {
+    transform: scale(1.2);
+}
+
+/* 
+    Responsive Design:
+    - Ensures the app looks good on smaller screens.
+    - Adjusts padding and font sizes for mobile devices.
+*/
+@media (max-width: 600px) {
+    .container {
+        padding-left: 5%;
+        padding-top: 6%;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .container button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .container button img {
+        width: 20px;
+        margin-top: 3px;
+    }
+
+    .input-box {
+        max-width: 100%;
+        min-height: 120px;
+        padding: 15px;
+    }
+
+    .input-box img {
+        width: 20px;
+        bottom: 10px;
+        right: 10px;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Meta Tags:
+        - charset: Defines the character encoding for the document.
+        - viewport: Ensures the website is responsive on various devices.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--
+        Title:
+        - Sets the title of the webpage displayed on the browser tab.
+    -->
+    <title>Note App</title>
+    
+    <!--
+        Link to External CSS:
+        - Connects the HTML to the CSS file for styling.
+    -->
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <!--
+        Main Container:
+        - Wraps all the content of the Notes App.
+    -->
+    <div class="container">
+        
+        <!--
+            Header Section:
+            - Contains the app title with an accompanying icon.
+        -->
+        <h1>
+            <img src="notes.png" alt="Notes Icon"> <!-- Icon representing notes -->
+            Notes
+        </h1>
+        
+        <!--
+            Create Note Button:
+            - Allows users to create a new note.
+        -->
+        <button class="btn">
+            <img src="edit.png" alt="Create Icon"> <!-- Icon for creating/editing notes -->
+            Create Notes
+        </button>
+        
+        <!--
+            Notes Container:
+            - Displays all the created notes.
+            - Initially empty; notes are dynamically added here.
+        -->
+        <div class="notes-container">
+            <!--
+                Example of a note structure (currently commented out):
+                <p contenteditable="true" class="input-box">
+                    <img src="delete.png" alt="Delete Icon">
+                </p>
+            -->
+        </div>
+    </div>
+ 
+    <!--
+        Link to External JavaScript:
+        - Connects the HTML to the JS file for interactivity.
+    -->
+    <script src="script.js"></script>
+</body>
+</html>
